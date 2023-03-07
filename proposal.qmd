@@ -43,6 +43,9 @@ library(tidyverse)
 ```{r}
 #| label: load-data-1
 
+library(haven)
+Pew_Twitter_Study_for_release <- read_sav("data/Pew_Twitter_Study_for_release.sav")
+
 glimpse(Pew_Twitter_Study_for_release)
 
 ```
@@ -78,12 +81,34 @@ glimpse(Pew_Twitter_Study_for_release)
 ```{r}
 #| label: load-data-2
 
-# add code here
+monkeypox <- read_csv("data/monkeypox.csv")
+
+glimpse(monkeypox)
 ```
 
 # Data 3
 
 ## Introduction and data
+
+The source of this data is our stats group. We are sending out a google form asking for the following data:
+
+	⁃	Major
+
+	⁃	Hours of sleep
+
+	⁃	Hours spent studying
+
+	⁃	Scale of 1-10, how happy are you
+
+	⁃	Greek life status (affiliated or not affiliated)
+
+	⁃	Relationship status (single or taken)
+
+	⁃	Gender identity
+
+	⁃	GPA
+
+The google form will be sent out to various group chats such as dorms, social groups, and class wide chats. The observations are fairly straightforward and self-explanatory.
 
 -   Identify the source of the data.
 
