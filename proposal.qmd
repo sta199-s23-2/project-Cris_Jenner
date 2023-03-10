@@ -26,9 +26,25 @@ library(tidyverse)
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    What is the factor of an individual's identity that predicts amount of twitter usage the most? Some examples of our questions include:
+
+    -   What is the relationship between education level and twitter usage?
+
+    -   What is the relationship between political leaning and twitter usage?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+    Our research topic encompasses how different aspects of identities affect how much people
+
+    use twitter. So far, our hypotheses include:
+
+    -   Left-leaning people use Twitter most often.
+
+    -   Highly-educated individuals use Twitter most often.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    Most of the variables are categorical, like amount of twitter usage. It is on a scale of "Several Times a Day" to "Once a Month or Less". However, they are converted to numerical values in R. Political leaning is quantitative on scales of 1-10, and education level is categorical on a similar scale to the twitter usage amount.
 
 ## Literature
 
@@ -92,21 +108,21 @@ glimpse(monkeypox)
 
 The source of this data is our stats group. We are sending out a google form asking for the following data:
 
-	⁃	Major
+    ⁃   Major
 
-	⁃	Hours of sleep
+    ⁃   Hours of sleep
 
-	⁃	Hours spent studying
+    ⁃   Hours spent studying
 
-	⁃	Scale of 1-10, how happy are you
+    ⁃   Scale of 1-10, how happy are you
 
-	⁃	Greek life status (affiliated or not affiliated)
+    ⁃   Greek life status (affiliated or not affiliated)
 
-	⁃	Relationship status (single or taken)
+    ⁃   Relationship status (single or taken)
 
-	⁃	Gender identity
+    ⁃   Gender identity
 
-	⁃	GPA
+    ⁃   GPA
 
 The google form will be sent out to various group chats such as dorms, social groups, and class wide chats. The observations are fairly straightforward and self-explanatory.
 
