@@ -92,9 +92,15 @@ glimpse(Pew_Twitter_Study_for_release)
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    What is the influence of year and country on amount of diagnosed monkey pox cases? What is the influence of year and country on amount of monkey pox deaths?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+    We are interested to see if countries with different resources affect how many people are diagnosed with monkey pox and the ratio of diagnoses to deaths. Our hypothesis is that countries with less resources have a higher death to diagnoses ratio and more diagnoses.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    The country name and ISO are both categorical variables, but the death and diagnosis rate are quantitative. The full date is categorical.
 
 ## Literature
 
