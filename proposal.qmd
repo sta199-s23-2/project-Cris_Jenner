@@ -154,9 +154,15 @@ The google form will be sent out to various group chats such as dorms, social gr
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    What factor most influences a Latinx individual's comfort after Trump was elected president?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+    We want to investigate if there is one factor that highly contributes to swaying opinions about Trump's election. One hypothesis we have is that US-born Latinx individuals are more comfortable than foreign-born individuals.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    The variable about level of comfort is categorical, as it includes a range of general statements. The variable about being born in the US is categorical, but it was converted to 1's for yeses and 0's for nos.
 
 ## Literature
 
@@ -175,6 +181,6 @@ library(haven)
 
 X2017_Post_Election_FOR_RELEASE <- read_sav("2017 Post Election_FOR RELEASE.sav")
 
-View(X2017_Post_Election_FOR_RELEASE)
+glimpse(X2017_Post_Election_FOR_RELEASE)
 
 ```
