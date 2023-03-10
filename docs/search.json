@@ -25,7 +25,7 @@
     "href": "proposal.html#introduction-and-data",
     "title": "Project title",
     "section": "Introduction and data",
-    "text": "Introduction and data\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations."
+    "text": "Introduction and data\n\nIdentify the source of the data.\nThe dataset is from the Pew Research Center.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nThe main personnel on the study include Nicole Neuenschwander, An Liu, and Wendy Mansfield, who were all part of a team at Ipsos Public Affairs. It was collected in 2018, and they ran a survey of 2791 US adult twitter users that were willing to share information about their twitter usage. Stratified random sampling was used to ensure that participants’ backgrounds mimicked those of the adult population in the US. Participants received an email with a survey link. \nWrite a brief description of the observations.\nParticipants were asked a large range of questions. The main observations were about twitter usage (do you use twitter, how often do you use twitter), participant’s political leanings (liberal or conservative), and questions about participant’s background and hobbies like volunteer work, views on abortion and participant’s views on themselves."
   },
   {
     "objectID": "proposal.html#research-question",
@@ -39,7 +39,7 @@
     "href": "proposal.html#literature",
     "title": "Project title",
     "section": "Literature",
-    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nProvide a one paragraph summary about the article.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited."
+    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nThe article is called “Sizing up Twitter users”, by the Pew Research Center.\nProvide a one paragraph summary about the article.\nThe article talks about the differences between Twitter users and the rest of the American population for a variety of topics.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited.\nWhile the article talks a lot about twitter usage, it is mostly comparing twitter users to the American population in general. Our research question focuses on the relationship between the variables within the dataset to twitter usage."
   },
   {
     "objectID": "proposal.html#glimpse-of-data",
@@ -60,7 +60,7 @@
     "href": "proposal.html#research-question-1",
     "title": "Project title",
     "section": "Research question",
-    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?"
+    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nWhat is the influence of year and country on amount of diagnosed monkey pox cases? What is the influence of year and country on amount of monkey pox deaths?\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nWe are interested to see if countries with different resources affect how many people are diagnosed with monkey pox and the ratio of diagnoses to deaths. Our hypothesis is that countries with less resources have a higher death to diagnoses ratio and more diagnoses.\nIdentify the types of variables in your research question. Categorical? Quantitative?\nThe country name and ISO are both categorical variables, but the death and diagnosis rate are quantitative. The full date is categorical."
   },
   {
     "objectID": "proposal.html#literature-1",
