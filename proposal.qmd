@@ -60,7 +60,7 @@ library(tidyverse)
 
 -   Provide a one paragraph summary about the article.
 
-    The article talks about the differences between Twitter users and the rest of the American population for a variety of topics.
+    The article talks about the differences between Twitter users and the rest of the American population for a variety of topics. Overall, US twitter users are younger and more likely to be Democratic than the general American public. 22% of twitter users are representative of Americans, but there is some variability in political leaning, education, and incomes. They also found that a large majority of tweets come from a small percentage of twitter users. There are only modest differences between twitter users that tweet a lot, and the bottom 90% of twitter users in political views.
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
