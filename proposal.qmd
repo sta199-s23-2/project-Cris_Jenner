@@ -84,40 +84,62 @@ glimpse(Pew_Twitter_Study_for_release)
 
 -   Identify the source of the data.
 
+    -   The data is from The Collection of Really Great, Interesting, Situated Datasets (CORGIS) Project.
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+    -   It was obtained using 2010 to 2019 data from the United States Census Bureau. Some of the estimates came from sample data.
+
 -   Write a brief description of the observations.
+
+    -   The data includes a wide variety of observations for various counties in the United States. This includes statistics like age percentages, education levels, ethnicities, housing, income, population, and employment.
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
-    What is the influence of year and country on amount of diagnosed monkey pox cases? What is the influence of year and country on amount of monkey pox deaths?
+    -   How do people\'s career and educational outcomes change depending on the region of the United States they live in?
+
+    -   How do income levels change in counties with different ethnic populations in the United States?
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-    We are interested to see if countries with different resources affect how many people are diagnosed with monkey pox and the ratio of diagnoses to deaths. Our hypothesis is that countries with less resources have a higher death to diagnoses ratio and more diagnoses.
+    -   We want to determine whether the region of the United States impacts different aspects of a person\'s life (like education, income, age range, etc.). 
+
+    -   A few of our hypotheses are:
+
+        -   Counties in the northeast and western coast of the United States have better career and educational outcomes. 
+
+        -   Counties with higher white populations will have higher average income levels.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-    The country name and ISO are both categorical variables, but the death and diagnosis rate are quantitative. The full date is categorical.
+    -   State is a categorical variable. All the other variables (such as income, ethnicities, education levels, etc.) are quantitative.
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
+    -   The article is called \"Key findings on the rise in income inequality within America\'s racial and ethnic groups.\"
+
+    -   <https://www.pewresearch.org/fact-tank/2018/07/12/key-findings-on-the-rise-in-income-inequality-within-americas-racial-and-ethnic-groups/>
+
 -   Provide a one paragraph summary about the article.
 
+    -   This was an article published by the Pew Research Center on July 12, 2018. It analyzed trends in income inequality based on race/ethnicity. They made five major findings. They found that Asians in the United States are the group with the most income inequality, and this inequality doubled since 1970. They also found that Asians have the highest incomes among racial/ethnic groups, but there is a lot of disparity among Asian Americans. They found that income gaps based on ethnicity/race still exist, and some of it is due to immigration.
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+    -   Our research question will look at more factors than just income levels. It will also examine factors like education, age range, housing, and employment.
 
 ## Glimpse of data
 
 ```{r}
 #| label: load-data-2
 
-monkeypox <- read_csv("data/monkeypox.csv")
+counties <- read_csv("data/county_demographics.csv")
 
-glimpse(monkeypox)
+glimpse(counties)
 ```
 
 # Data 3
