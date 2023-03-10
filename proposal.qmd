@@ -126,9 +126,15 @@ glimpse(monkeypox)
 
 -   Identify the source of the data.
 
+    The data was collected by the Pew Research Center.
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+    The survey was conducted between December 7, 2016 and January 15, 2017. The Pew Research Center did a random telephone survey of Latino adults residing in the US.
+
 -   Write a brief description of the observations.
+
+    The main observations were age, asking Latino people their views on the current state of the government for Latino people (fear of being deported, is the American Dream hard to achieve), and views on the Obama and Trump administrations.
 
 ## Research question
 
@@ -152,11 +158,11 @@ glimpse(monkeypox)
 
 -   Provide a one paragraph summary about the article.
 
-    \"Latinos and the New Trump Administration\" is an article published by Pew Research Center Staff based on data found in the dataset we are interested in researching. This article was published on February, 23rd 2017, about a month after Donald Trump\'s inauguration. The article analyzes how confident Latinos feel about their place in America, how they feel like their situation has changed since Trump was elected, and their concerns about deportation. In summarizing the data, Latinos who were US citizens had the least concerns about their place in America at 34%. Almost half of the Hispanics in this country felt as if their situation was \"about the same\" as it was a year ago, 32% felt that it was worse, and 16% felt as if it was improved. 47% of all Hispanics had at least some deportation concerns, and were higher for groups who were not US-born or US citizens. Additionally, the top issue most Hispanics ranked as their number one priority was improving the nation's educational system.
+    "Latinos and the New Trump Administration" is an article published by Pew Research Center Staff based on data found in the dataset we are interested in researching. This article was published on February, 23rd 2017, about a month after Donald Trump's inauguration. The article analyzes how confident Latinos feel about their place in America, how they feel like their situation has changed since Trump was elected, and their concerns about deportation. In summarizing the data, Latinos who were US citizens had the least concerns about their place in America at 34%. Almost half of the Hispanics in this country felt as if their situation was "about the same" as it was a year ago, 32% felt that it was worse, and 16% felt as if it was improved. 47% of all Hispanics had at least some deportation concerns, and were higher for groups who were not US-born or US citizens. Additionally, the top issue most Hispanics ranked as their number one priority was improving the nation's educational system.
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
-    We hope to extrapolate from this data that those who were \"comfortable in their place in America\" supported Trump\'s presidency, which provides a new layer of interesting data correlations, like immigration status, education level, etc.
+    We hope to extrapolate from this data that those who were "comfortable in their place in America" supported Trump's presidency, which provides a new layer of interesting data correlations, like immigration status, education level, etc.
 
 ## Glimpse of data
 
