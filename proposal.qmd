@@ -18,25 +18,53 @@ library(tidyverse)
 
 -   Identify the source of the data.
 
+    The dataset is from the Pew Research Center.
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+    The main personnel on the study include Nicole Neuenschwander, An Liu, and Wendy Mansfield, who were all part of a team at Ipsos Public Affairs. It was collected in 2018, and they ran a survey of 2791 US adult twitter users that were willing to share information about their twitter usage. Stratified random sampling was used to ensure that participants' backgrounds mimicked those of the adult population in the US. Participants received an email with a survey link. 
+
 -   Write a brief description of the observations.
+
+    Participants were asked a large range of questions. The main observations were about twitter usage (do you use twitter, how often do you use twitter), participant's political leanings (liberal or conservative), and questions about participant's background and hobbies like volunteer work, views on abortion and participant's views on themselves.
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    What is the factor of an individual's identity that predicts amount of twitter usage the most? Some examples of our questions include:
+
+    -   What is the relationship between education level and twitter usage?
+
+    -   What is the relationship between political leaning and twitter usage?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+    Our research topic encompasses how different aspects of identities affect how much people
+
+    use twitter. So far, our hypotheses include:
+
+    -   Left-leaning people use Twitter most often.
+
+    -   Highly-educated individuals use Twitter most often.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    Most of the variables are categorical, like amount of twitter usage. It is on a scale of "Several Times a Day" to "Once a Month or Less". However, they are converted to numerical values in R. Political leaning is quantitative on scales of 1-10, and education level is categorical on a similar scale to the twitter usage amount.
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
+    The article is called "Sizing up Twitter users", by the Pew Research Center.
+
 -   Provide a one paragraph summary about the article.
 
+    The article talks about the differences between Twitter users and the rest of the American population for a variety of topics.
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+    While the article talks a lot about twitter usage, it is mostly comparing twitter users to the American population in general. Our research question focuses on the relationship between the variables within the dataset to twitter usage.
 
 ## Glimpse of data
 
@@ -64,9 +92,15 @@ glimpse(Pew_Twitter_Study_for_release)
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    What is the influence of year and country on amount of diagnosed monkey pox cases? What is the influence of year and country on amount of monkey pox deaths?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+    We are interested to see if countries with different resources affect how many people are diagnosed with monkey pox and the ratio of diagnoses to deaths. Our hypothesis is that countries with less resources have a higher death to diagnoses ratio and more diagnoses.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    The country name and ISO are both categorical variables, but the death and diagnosis rate are quantitative. The full date is categorical.
 
 ## Literature
 
@@ -137,5 +171,10 @@ The google form will be sent out to various group chats such as dorms, social gr
 ```{r}
 #| label: load-data-3
 
-# add code here
+library(haven)
+
+X2017_Post_Election_FOR_RELEASE <- read_sav("2017 Post Election_FOR RELEASE.sav")
+
+View(X2017_Post_Election_FOR_RELEASE)
+
 ```

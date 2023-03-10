@@ -218,25 +218,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction-and-data" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li><p>Identify the source of the data.</p>
+<p>The dataset is from the Pew Research Center.</p></li>
+<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p>
+<p>The main personnel on the study include Nicole Neuenschwander, An Liu, and Wendy Mansfield, who were all part of a team at Ipsos Public Affairs. It was collected in 2018, and they ran a survey of 2791 US adult twitter users that were willing to share information about their twitter usage. Stratified random sampling was used to ensure that participants’ backgrounds mimicked those of the adult population in the US. Participants received an email with a survey link.&nbsp;</p></li>
+<li><p>Write a brief description of the observations.</p>
+<p>Participants were asked a large range of questions. The main observations were about twitter usage (do you use twitter, how often do you use twitter), participant’s political leanings (liberal or conservative), and questions about participant’s background and hobbies like volunteer work, views on abortion and participant’s views on themselves.</p></li>
 </ul>
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research question</h2>
 <ul>
-<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p></li>
-<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p></li>
-<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p></li>
+<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p>
+<p>What is the factor of an individual’s identity that predicts amount of twitter usage the most? Some examples of our questions include:</p>
+<ul>
+<li><p>What is the relationship between education level and twitter usage?</p></li>
+<li><p>What is the relationship between political leaning and twitter usage?</p></li>
+</ul></li>
+<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p>
+<p>Our research topic encompasses how different aspects of identities affect how much people</p>
+<p>use twitter. So far, our hypotheses include:</p>
+<ul>
+<li><p>Left-leaning people use Twitter most often.</p></li>
+<li><p>Highly-educated individuals use Twitter most often.</p></li>
+</ul></li>
+<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p>
+<p>Most of the variables are categorical, like amount of twitter usage. It is on a scale of “Several Times a Day” to “Once a Month or Less”. However, they are converted to numerical values in R. Political leaning is quantitative on scales of 1-10, and education level is categorical on a similar scale to the twitter usage amount.</p></li>
 </ul>
 </section>
 <section id="literature" class="level2">
 <h2 class="anchored" data-anchor-id="literature">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
+<li><p>Find one published credible article on the topic you are interested in researching.</p>
+<p>The article is called “Sizing up Twitter users”, by the Pew Research Center.</p></li>
+<li><p>Provide a one paragraph summary about the article.</p>
+<p>The article talks about the differences between Twitter users and the rest of the American population for a variety of topics.</p></li>
+<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p>
+<p>While the article talks a lot about twitter usage, it is mostly comparing twitter users to the American population in general. Our research question focuses on the relationship between the variables within the dataset to twitter usage.</p></li>
 </ul>
 </section>
 <section id="glimpse-of-data" class="level2">
@@ -447,9 +465,12 @@ $ PPWORK                 &lt;dbl+lbl&gt; 4, 5, 1, 1, 1, 2, 5, 5, 1, 1, 1, 1, 5, 
 <section id="research-question-1" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-1">Research question</h2>
 <ul>
-<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p></li>
-<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p></li>
-<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p></li>
+<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p>
+<p>What is the influence of year and country on amount of diagnosed monkey pox cases? What is the influence of year and country on amount of monkey pox deaths?</p></li>
+<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p>
+<p>We are interested to see if countries with different resources affect how many people are diagnosed with monkey pox and the ratio of diagnoses to deaths. Our hypothesis is that countries with less resources have a higher death to diagnoses ratio and more diagnoses.</p></li>
+<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p>
+<p>The country name and ISO are both categorical variables, but the death and diagnosis rate are quantitative. The full date is categorical.</p></li>
 </ul>
 </section>
 <section id="literature-1" class="level2">
