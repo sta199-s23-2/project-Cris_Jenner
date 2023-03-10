@@ -92,21 +92,21 @@ glimpse(monkeypox)
 
 The source of this data is our stats group. We are sending out a google form asking for the following data:
 
-	⁃	Major
+    ⁃   Major
 
-	⁃	Hours of sleep
+    ⁃   Hours of sleep
 
-	⁃	Hours spent studying
+    ⁃   Hours spent studying
 
-	⁃	Scale of 1-10, how happy are you
+    ⁃   Scale of 1-10, how happy are you
 
-	⁃	Greek life status (affiliated or not affiliated)
+    ⁃   Greek life status (affiliated or not affiliated)
 
-	⁃	Relationship status (single or taken)
+    ⁃   Relationship status (single or taken)
 
-	⁃	Gender identity
+    ⁃   Gender identity
 
-	⁃	GPA
+    ⁃   GPA
 
 The google form will be sent out to various group chats such as dorms, social groups, and class wide chats. The observations are fairly straightforward and self-explanatory.
 
