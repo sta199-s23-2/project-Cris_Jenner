@@ -22,11 +22,11 @@ library(tidyverse)
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
-    The main personnel on the study include Nicole Neuenschwander, An Liu, and Wendy Mansfield, who were all part of a team at Ipsos Public Affairs. It was collected in 2018, and they ran a survey of 2791 US adult twitter users that were willing to share information about their twitter usage. Stratified random sampling was used to ensure that participants\' backgrounds mimicked those of the adult population in the US. Participants received an email with a survey link. 
+    The main personnel on the study include Nicole Neuenschwander, An Liu, and Wendy Mansfield, who were all part of a team at Ipsos Public Affairs. It was collected in 2018, and they ran a survey of 2791 US adult twitter users that were willing to share information about their twitter usage. Stratified random sampling was used to ensure that participants' backgrounds mimicked those of the adult population in the US. Participants received an email with a survey link. 
 
 -   Write a brief description of the observations.
 
-    Participants were asked a large range of questions. The main observations were about twitter usage (do you use twitter, how often do you use twitter), participant\'s political leanings (liberal or conservative), and questions about participant\'s background and hobbies like volunteer work, views on abortion and participant\'s views on themselves.
+    Participants were asked a large range of questions. The main observations were about twitter usage (do you use twitter, how often do you use twitter), participant's political leanings (liberal or conservative), and questions about participant's background and hobbies like volunteer work, views on abortion and participant's views on themselves.
 
 ## Research question
 
@@ -56,7 +56,7 @@ library(tidyverse)
 
 -   Find one published credible article on the topic you are interested in researching.
 
-    The article is called \"Sizing up Twitter users\", by the Pew Research Center.
+    The article is called "Sizing up Twitter users", by the Pew Research Center.
 
 -   Provide a one paragraph summary about the article.
 
@@ -165,5 +165,10 @@ The google form will be sent out to various group chats such as dorms, social gr
 ```{r}
 #| label: load-data-3
 
-# add code here
+library(haven)
+
+X2017_Post_Election_FOR_RELEASE <- read_sav("2017 Post Election_FOR RELEASE.sav")
+
+View(X2017_Post_Election_FOR_RELEASE)
+
 ```
