@@ -124,26 +124,6 @@ glimpse(monkeypox)
 
 ## Introduction and data
 
-The source of this data is our stats group. We are sending out a google form asking for the following data:
-
-    ⁃   Major
-
-    ⁃   Hours of sleep
-
-    ⁃   Hours spent studying
-
-    ⁃   Scale of 1-10, how happy are you
-
-    ⁃   Greek life status (affiliated or not affiliated)
-
-    ⁃   Relationship status (single or taken)
-
-    ⁃   Gender identity
-
-    ⁃   GPA
-
-The google form will be sent out to various group chats such as dorms, social groups, and class wide chats. The observations are fairly straightforward and self-explanatory.
-
 -   Identify the source of the data.
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
@@ -168,9 +148,15 @@ The google form will be sent out to various group chats such as dorms, social gr
 
 -   Find one published credible article on the topic you are interested in researching.
 
+    <https://www.pewresearch.org/hispanic/2017/02/23/latinos-and-the-new-trump-administration/>
+
 -   Provide a one paragraph summary about the article.
 
+    \"Latinos and the New Trump Administration\" is an article published by Pew Research Center Staff based on data found in the dataset we are interested in researching. This article was published on February, 23rd 2017, about a month after Donald Trump\'s inauguration. The article analyzes how confident Latinos feel about their place in America, how they feel like their situation has changed since Trump was elected, and their concerns about deportation. In summarizing the data, Latinos who were US citizens had the least concerns about their place in America at 34%. Almost half of the Hispanics in this country felt as if their situation was \"about the same\" as it was a year ago, 32% felt that it was worse, and 16% felt as if it was improved. 47% of all Hispanics had at least some deportation concerns, and were higher for groups who were not US-born or US citizens. Additionally, the top issue most Hispanics ranked as their number one priority was improving the nation's educational system.
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+    We hope to extrapolate from this data that those who were \"comfortable in their place in America\" supported Trump\'s presidency, which provides a new layer of interesting data correlations, like immigration status, education level, etc.
 
 ## Glimpse of data
 
