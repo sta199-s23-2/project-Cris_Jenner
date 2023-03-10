@@ -18,9 +18,15 @@ library(tidyverse)
 
 -   Identify the source of the data.
 
+    The dataset is from the Pew Research Center.
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+    The main personnel on the study include Nicole Neuenschwander, An Liu, and Wendy Mansfield, who were all part of a team at Ipsos Public Affairs. It was collected in 2018, and they ran a survey of 2791 US adult twitter users that were willing to share information about their twitter usage. Stratified random sampling was used to ensure that participants\' backgrounds mimicked those of the adult population in the US. Participants received an email with a survey link. 
+
 -   Write a brief description of the observations.
+
+    Participants were asked a large range of questions. The main observations were about twitter usage (do you use twitter, how often do you use twitter), participant\'s political leanings (liberal or conservative), and questions about participant\'s background and hobbies like volunteer work, views on abortion and participant\'s views on themselves.
 
 ## Research question
 
@@ -50,9 +56,15 @@ library(tidyverse)
 
 -   Find one published credible article on the topic you are interested in researching.
 
+    The article is called \"Sizing up Twitter users\", by the Pew Research Center.
+
 -   Provide a one paragraph summary about the article.
 
+    The article talks about the differences between Twitter users and the rest of the American population for a variety of topics.
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+    While the article talks a lot about twitter usage, it is mostly comparing twitter users to the American population in general. Our research question focuses on the relationship between the variables within the dataset to twitter usage.
 
 ## Glimpse of data
 
