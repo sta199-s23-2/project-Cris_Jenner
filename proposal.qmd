@@ -191,7 +191,7 @@ glimpse(counties)
 
 library(haven)
 
-X2017_Post_Election_FOR_RELEASE <- read_sav("2017 Post Election_FOR RELEASE.sav")
+X2017_Post_Election_FOR_RELEASE <- read_sav("data/2017 Post Election_FOR RELEASE.sav")
 
 glimpse(X2017_Post_Election_FOR_RELEASE)
 
