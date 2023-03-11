@@ -1,5 +1,5 @@
 ---
-title: "Project title"
+title: "Cris Jenner Project"
 subtitle: "Proposal"
 format: html
 editor: visual
