@@ -40,9 +40,7 @@ library(tidyverse)
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-    Our research topic encompasses how different aspects of identities affect how much people
-
-    use twitter. So far, our hypotheses include:
+    Our research topic encompasses how different aspects of identities affect how much people use twitter. So far, our hypotheses include:
 
     -   Left-leaning people use Twitter most often.
 
@@ -100,7 +98,7 @@ glimpse(Pew_Twitter_Study_for_release)
 
     -   How do people's career and educational outcomes change depending on the region of the United States they live in?
 
-    -   How do income levels change in counties with different ethnic populations in the United States?
+    -   How do income levels change in various counties with different ethnic populations in the United States?
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
