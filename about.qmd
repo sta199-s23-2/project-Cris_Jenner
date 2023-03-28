@@ -4,10 +4,9 @@ format: html
 editor: visual
 ---
 
-This project was developed by **\[team name\]** For [STA 199: Introduction to Data Science](https://sta199-s23-2.github.io/) at Duke University. The team is comprised of the following team members.
+This project was developed by **Cris Jenner** For [STA 199: Introduction to Data Science](https://sta199-s23-2.github.io/) at Duke University. The team is comprised of the following team members.
 
--   Team member 1: One sentence description of Team member 1 (e.g., year, major, etc.).
--   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
--   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
--   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
--   ...
+-   Irene Biju: I am a freshman from Philadelphia, PA, intending to major in Public Policy and Computer Science.
+-   Rachel Collins: I am a freshman from Nashville, TN, intending to major in Public Policy and Spanish.
+-   Sophia Liu: I am a freshman from Cary, NC, intending to major in Economics with a Finance Concentration.
+-   Claire Raney: I am a freshman from Woodside, CA intending to major in Psychology and get the MMS certificate.
