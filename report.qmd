@@ -6,15 +6,18 @@ editor: visual
 execute:
   echo: true
 ---
+
 ***Introduction***
-Topic Description:
-Research Question:
-Hypothesis:
-Potential Ethical Issues(regarding data collection):
-***Data***
-Source of the Data:
-When and How the Data Was Collected:
-The Cases:
-Description of Relevant Variables:
-***Methodology***
-***Results***
+
+There are persistent problems and injustices in the United States around educational and income inequality. For our research project, we are going to examine what factors influence career outcomes (one\'s education and income) by looking at data from over 3,000 counties in the United States. In many cases, these education and income are very interrelated for families and counties causing or exacerbating a vicious cycle that can be hard to break. In America, there are many root causes that contribute to such a cycle, and it is important they are clearly researched and evaluated, so changes can start to be made to populations and countues that need them most. There are many factors that can influence one\'s career outcomes, but some particularly important ones are education level, ethnicity, gender, and state. According to the APLU, people who hold college degrees are twice as likely to get a job and make around an extra \$1.2 million over the course of their life (APLU). Black or Latino families make around 50% of what white households do, according to the Federal Reserve Board (Federal Reserve Board). The gender pay gap still persists, with women earning an average of 82% of what men do (PEW Research Center). On the state level, various factors such as funding per county and class disparities can impact income inequality as well. There is intersectionality in everyone's identities and therefore the counties identities as well, and when combined, can have even greater impacts on career outcomes, so knowing which specific identities are most vulnerable is also a key step to making actionable change. We believe counties with residents with higher levels of education, a higher white population, more males, and live in states with greater funding and job opportunities will have better career outcomes. Since this data has been gathered by the US Census Bureau, a government organization, there should be no ethical concerns. They adhere to strict privacy policy guidelines to ensure a confidential, respectful, and transparent experience for participants when collecting data (United States Census Bureau).
+
+<https://www.census.gov/about/policies/privacy/data_stewardship/our_privacy_principles.html>
+
+<https://www.aplu.org/our-work/4-policy-and-advocacy/publicuvalues/employment-earnings/#:~:text=The%20evidence%20that%20a%20college,on%20average%20over%20their%20lifetime>.
+
+<https://www.federalreserve.gov/econres/notes/feds-notes/wealth-inequality-and-the-racial-wealth-gap-20211022.html#:~:text=In%20the%20United%20States%2C%20the,percent%20as%20much%20net%20wealth>.
+
+<https://www.pewresearch.org/fact-tank/2023/03/01/gender-pay-gap-facts/#:~:text=The%20gender%20gap%20in%20pay,%2D%20and%20part%2Dtime%20workers>.
+
+\
+***Data*** Source of the Data: When and How the Data Was Collected: The Cases: Description of Relevant Variables: ***Methodology*** ***Results***
