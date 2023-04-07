@@ -88,6 +88,28 @@ plot_usmap(data = maps_dataframe,
   theme(legend.position = "bottom") 
 ```
 
+```{r}
+#| label: age-gender
+#| message: false
+#| warning: false
+
+by_age <- counties |>
+  group_by(State) |>
+  summarize(percent_female = median(`Miscellaneous.Percent Female`),
+            percent_male = median(100 - `Miscellaneous.Percent Female`))
+
+maps_dataframe <- full_join(statepop, by_age, by = c("abbr" = "State")) 
+
+plot_usmap(data = maps_dataframe,
+           values = "percent_female",
+           labels = TRUE) +
+  labs(fill = "Median percent female", 
+       title = "Gender Breakdowns By State") +
+  scale_fill_viridis_c() +
+  theme(legend.position = "bottom") 
+
+```
+
 ***Results***
 
 According to the maps, education and income levels appear to be the lowest in the southern regions, especially in the southeast. They tend to be the highest in the northeast and west.
