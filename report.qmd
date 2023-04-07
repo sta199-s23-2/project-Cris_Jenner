@@ -93,18 +93,32 @@ plot_usmap(data = maps_dataframe,
 #| message: false
 #| warning: false
 
-by_age <- counties |>
+by_gender <- counties |>
   group_by(State) |>
   summarize(percent_female = median(`Miscellaneous.Percent Female`),
             percent_male = median(100 - `Miscellaneous.Percent Female`))
 
-maps_dataframe <- full_join(statepop, by_age, by = c("abbr" = "State")) 
+maps_dataframe1 <- full_join(statepop, by_gender, by = c("abbr" = "State")) 
 
-plot_usmap(data = maps_dataframe,
+plot_usmap(data = maps_dataframe1,
            values = "percent_female",
            labels = TRUE) +
   labs(fill = "Median percent female", 
        title = "Gender Breakdowns By State") +
+  scale_fill_viridis_c() +
+  theme(legend.position = "bottom") 
+
+by_age <- counties |>
+  group_by(State) |>
+  summarize(percent_elderly = median(`Age.Percent 65 and Older`))
+
+maps_dataframe2 <- full_join(statepop, by_age, by = c("abbr" = "State")) 
+
+plot_usmap(data = maps_dataframe2,
+           values = "percent_elderly",
+           labels = TRUE) +
+  labs(fill = "Median percent of population over 65 years old", 
+       title = "Elderly Populations Breakdowns By State") +
   scale_fill_viridis_c() +
   theme(legend.position = "bottom") 
 
