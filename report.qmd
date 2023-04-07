@@ -138,12 +138,33 @@ plot_usmap(data = maps_dataframe2,
 
 ```
 
+```{r}
+#| label: education
+#| message: false
+#| warning: false
+
+by_education <- counties |>
+  group_by(State) |>
+  summarize(percent_collegedegree = median(`Education.Bachelor's Degree or Higher`))
+
+maps_dataframe3 <- full_join(statepop, by_education, by = c("abbr" = "State")) 
+
+plot_usmap(data = maps_dataframe3,
+           values = "percent_collegedegree",
+           labels = TRUE) +
+  labs(fill = "Median percent college degree", 
+       title = "College Degree Breakdowns By State") +
+  scale_fill_viridis_c() +
+  theme(legend.position = "bottom") 
+
+```
+
 ***Results***
 
 According to the maps, education and income levels appear to be the lowest in the southern regions, especially in the southeast. They tend to be the highest in the northeast and west.
 
 ```{r}
-#| label: lin_reg
+#| label: lin_reg_age_gender
 
 lm(`Income.Median Houseold Income` ~ `Age.Percent 65 and Older` + 
         `Miscellaneous.Percent Female`, 
@@ -160,7 +181,4 @@ According to the maps, within each state's population, there seems to be a lower
 
 According to the maps, the percent elderly in the US among states seems to be very scattered among regions. Among all states, Montana seems to have the greatest elderly population while Utah and Alaska seem to have the lowest. It seems that states in the northwest seem to have the greatest elderly populations, although the correlation among region seems to be weak.
 
-According to the mean summary statistics of percentage of persons of white 
-ethnicity per county, there is a decrease in median household income between
-above average percentage of white persons and below average percentage of white
-persons. There is a decrease of $1945.99 in median household income.
+According to the mean summary statistics of percentage of persons of white ethnicity per county, there is a decrease in median household income between above average percentage of white persons and below average percentage of white persons. There is a decrease of \$1945.99 in median household income.
