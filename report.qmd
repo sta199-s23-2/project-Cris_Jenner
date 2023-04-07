@@ -24,7 +24,7 @@ There are persistent problems and injustices in the United States around educati
 
 The dataset we are analyzing is from The Collection of Really Great, Interesting, Situated Datasets (CORGIS) Project. Furthermore, it was collected using 2010 to 2019 data from the United States Census Bureau. It should be noted that some of the estimates came from sample data. The dataset includes a wide variety of observations for various counties in the United States. In order to best serve our research question, we will focus on the statistics such as education level, ethnicity, age, gender, and state. The data is largely qualitative and in terms of what percentage of the county fits a certain description such as being a high school graduate or white.\
 
-***Methodology*** 
+***Methodology***
 
 ```{r}
 #| label: load-pkgs
@@ -32,6 +32,8 @@ The dataset we are analyzing is from The Collection of Really Great, Interesting
 #| warning: false
 
 library(tidyverse)
+library(usmap)
+library(geofacet)
 ```
 
 ```{r}
@@ -53,6 +55,16 @@ county_fit <- linear_reg() |>
         `Ethnicities.White Alone	 not Hispanic or Latino` + 
         `Ethnicities.Hispanic or Latino`, 
       data = counties, family = "binomial") 
+```
+
+```{r}
+#| label: states
+#| message: false
+#| warning: false
+
+statepop <- statepop
+
+
 ```
 
 ***Results***
