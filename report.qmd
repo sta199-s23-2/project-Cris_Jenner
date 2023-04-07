@@ -115,6 +115,46 @@ plot_usmap(data = maps_dataframe,
   theme(legend.position = "bottom") 
 ```
 
+```{r}
+#| label: age-gender
+#| message: false
+#| warning: false
+
+by_gender <- counties |>
+  group_by(State) |>
+  summarize(percent_female = median(`Miscellaneous.Percent Female`),
+            percent_male = median(100 - `Miscellaneous.Percent Female`))
+
+maps_dataframe1 <- full_join(statepop, by_gender, by = c("abbr" = "State")) 
+
+plot_usmap(data = maps_dataframe1,
+           values = "percent_female",
+           labels = TRUE) +
+  labs(fill = "Median percent female", 
+       title = "Gender Breakdowns By State") +
+  scale_fill_viridis_c() +
+  theme(legend.position = "bottom") 
+
+by_age <- counties |>
+  group_by(State) |>
+  summarize(percent_elderly = median(`Age.Percent 65 and Older`))
+
+maps_dataframe2 <- full_join(statepop, by_age, by = c("abbr" = "State")) 
+
+plot_usmap(data = maps_dataframe2,
+           values = "percent_elderly",
+           labels = TRUE) +
+  labs(fill = "Median percent of population over 65 years old", 
+       title = "Elderly Populations Breakdowns By State") +
+  scale_fill_viridis_c() +
+  theme(legend.position = "bottom") 
+
+```
+
 ***Results***
 
 According to the maps, education and income levels appear to be the lowest in the southern regions, especially in the southeast. They tend to be the highest in the northeast and west.
+
+According to the maps, within each state's population, there seems to be a lower percent of females in the northwest and west (\~48% to 50%), while there seems to be a higher percent of females comparatively in the east and southeast regions.
+
+According to the maps, the percent elderly in the US among states seems to be very scattered among regions. Among all states, Montana seems to have the greatest elderly population while Utah and Alaska seem to have the lowest. It seems that states in the northwest seem to have the greatest elderly populations, although the correlation among region seems to be weak.
