@@ -89,3 +89,5 @@ plot_usmap(data = maps_dataframe,
 ```
 
 ***Results***
+
+According to the maps, education and income levels appear to be the lowest in the southern regions, especially in the southeast. They tend to be the highest in the northeast and west.
