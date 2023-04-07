@@ -64,7 +64,28 @@ county_fit <- linear_reg() |>
 
 statepop <- statepop
 
+state_data <- counties |>
+  group_by(State) |>
+  summarize(median_income = median(`Income.Median Houseold Income`),
+            median_education = median(`Education.Bachelor's Degree or Higher`))
 
+maps_dataframe <- full_join(statepop, state_data, by = c("abbr" = "State")) 
+
+plot_usmap(data = maps_dataframe,
+           values = "median_income",
+           labels = TRUE) +
+  labs(fill = "Median Household Income", 
+       title = "Household Incomes Per State") +
+  scale_fill_viridis_c() +
+  theme(legend.position = "bottom") 
+
+plot_usmap(data = maps_dataframe,
+           values = "median_education",
+           labels = TRUE) +
+  labs(fill = "Median Education Levels", 
+       title = "Education Levels Per State") +
+  scale_fill_viridis_c() +
+  theme(legend.position = "bottom") 
 ```
 
 ***Results***
