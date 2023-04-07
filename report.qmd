@@ -32,8 +32,6 @@ The dataset we are analyzing is from The Collection of Really Great, Interesting
 #| warning: false
 
 library(tidyverse)
-library(usmap)
-library(geofacet)
 ```
 
 ```{r}
@@ -42,19 +40,48 @@ library(geofacet)
 #| warning: false
 
 counties <- read_csv("data/county_demographics.csv")
-
-glimpse(counties)
 ```
 
 ```{r}
-#| label: linreg_ethnicity
-#| eval: false
-county_fit <- linear_reg() |>
-  set_engine("lm") |>
-  fit(`Income.Median Houseold Income` ~ 
-        `Ethnicities.White Alone	 not Hispanic or Latino` + 
-        `Ethnicities.Hispanic or Latino`, 
-      data = counties, family = "binomial") 
+#| label: mean_white
+
+counties |>
+  summarize(mean(`Ethnicities.White Alone	 not Hispanic or Latino`))
+```
+
+```{r}
+#| label: mean_income_95
+
+counties_white95 <- counties |>
+  filter(`Ethnicities.White Alone	 not Hispanic or Latino` >= 95)
+
+counties_white95 |>
+  summarize(mean_income = mean(`Income.Median Houseold Income`))
+```
+```{r}
+#| label: mean_income_75
+
+counties_nonwhite75 <- counties|>
+  filter(`Ethnicities.White Alone	 not Hispanic or Latino` <= 75.83992) 
+
+counties_nonwhite75 |>
+  summarize(mean_income_nonwhite = mean(`Income.Median Houseold Income`))
+```
+
+```{r}
+#| label: mean_income_55
+
+counties_nonwhite_55 <- counties|>
+  filter(`Ethnicities.White Alone	 not Hispanic or Latino` < 55) 
+
+counties_nonwhite_55 |>
+  summarize(mean_income_nonwhite = mean(`Income.Median Houseold Income`))
+```
+
+
+
+```{r}
+
 ```
 
 ```{r}
