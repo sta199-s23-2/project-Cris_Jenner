@@ -32,6 +32,8 @@ The dataset we are analyzing is from The Collection of Really Great, Interesting
 #| warning: false
 
 library(tidyverse)
+library(usmap)
+library(geofacet)
 ```
 
 ```{r}
@@ -50,38 +52,23 @@ counties |>
 ```
 
 ```{r}
-#| label: mean_income_95
+#| label: mean_income_above
 
-counties_white95 <- counties |>
-  filter(`Ethnicities.White Alone	 not Hispanic or Latino` >= 95)
+counties_white <- counties |>
+  filter(`Ethnicities.White Alone	 not Hispanic or Latino` >= 75.83992)
 
-counties_white95 |>
-  summarize(mean_income = mean(`Income.Median Houseold Income`))
+counties_white |>
+  summarize(mean_income_white = mean(`Income.Median Houseold Income`))
 ```
-```{r}
-#| label: mean_income_75
 
-counties_nonwhite75 <- counties|>
+```{r}
+#| label: mean_income_below
+
+counties_nonwhite <- counties|>
   filter(`Ethnicities.White Alone	 not Hispanic or Latino` <= 75.83992) 
 
-counties_nonwhite75 |>
+counties_nonwhite |>
   summarize(mean_income_nonwhite = mean(`Income.Median Houseold Income`))
-```
-
-```{r}
-#| label: mean_income_55
-
-counties_nonwhite_55 <- counties|>
-  filter(`Ethnicities.White Alone	 not Hispanic or Latino` < 55) 
-
-counties_nonwhite_55 |>
-  summarize(mean_income_nonwhite = mean(`Income.Median Houseold Income`))
-```
-
-
-
-```{r}
-
 ```
 
 ```{r}
