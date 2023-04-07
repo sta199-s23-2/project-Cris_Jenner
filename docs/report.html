@@ -122,6 +122,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -307,6 +308,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p><strong><em>Results</em></strong></p>
 <p>According to the maps, education and income levels appear to be the lowest in the southern regions, especially in the southeast. They tend to be the highest in the northeast and west.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="st">`</span><span class="at">Income.Median Houseold Income</span><span class="st">`</span> <span class="sc">~</span> <span class="st">`</span><span class="at">Age.Percent 65 and Older</span><span class="st">`</span> <span class="sc">+</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>        <span class="st">`</span><span class="at">Miscellaneous.Percent Female</span><span class="st">`</span>, </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> counties)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = `Income.Median Houseold Income` ~ `Age.Percent 65 and Older` + 
+    `Miscellaneous.Percent Female`, data = counties)
+
+Coefficients:
+                   (Intercept)      `Age.Percent 65 and Older`  
+                       61790.0                          -799.7  
+`Miscellaneous.Percent Female`  
+                         150.2  </code></pre>
+</div>
+</div>
+<p><span class="math inline">\(\widehat{Median\_Household\_Income} = 61790 - 799.7*Percent\_65\_and\_Older + 150.2*Percent\_Female\)</span></p>
+<p>Holding percent of women in each county constant, for a one percent increase in percent of county citizens 65 years or older, we estimate a mean change in median household income of -799.70 dollars.</p>
+<p>Holding percent of citizens 65 years or older, for a one percent increase in percent of women in each county, we estimate a mean change in median household income of $150.20.</p>
 <p>According to the maps, within each state’s population, there seems to be a lower percent of females in the northwest and west (~48% to 50%), while there seems to be a higher percent of females comparatively in the east and southeast regions.</p>
 <p>According to the maps, the percent elderly in the US among states seems to be very scattered among regions. Among all states, Montana seems to have the greatest elderly population while Utah and Alaska seem to have the lowest. It seems that states in the northwest seem to have the greatest elderly populations, although the correlation among region seems to be weak.</p>
 
