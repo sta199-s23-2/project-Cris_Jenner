@@ -127,3 +127,7 @@ plot_usmap(data = maps_dataframe2,
 ***Results***
 
 According to the maps, education and income levels appear to be the lowest in the southern regions, especially in the southeast. They tend to be the highest in the northeast and west.
+
+According to the maps, within each state's population, there seems to be a lower percent of females in the northwest and west (\~48% to 50%), while there seems to be a higher percent of females comparatively in the east and southeast regions.
+
+According to the maps, the percent elderly in the US among states seems to be very scattered among regions. Among all states, Montana seems to have the greatest elderly population while Utah and Alaska seem to have the lowest. It seems that states in the northwest seem to have the greatest elderly populations, although the correlation among region seems to be weak.
