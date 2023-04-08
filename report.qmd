@@ -174,7 +174,7 @@ We first summarized our data (finding median income, education levels, etc.) and
 
 ***Results***
 
-According to the maps, education and income levels appear to be the lowest in the southern regions, especially in the southeast. They tend to be the highest in the northeast and west.
+First of all, according to the map visualization, median household income levels appear to be the lowest in the southern regions, particularly in the southeast. They tend to be the highest in the northeast and west. This trend is very similar for the map visualization of median education levels, but the difference between the regions is not as extreme. There are very high median education levels in the northeast compared to the rest of the country.
 
 Additionally, within each state's population, there seems to be a lower percent of females in the northwest and west (\~48% to 50%), while there seems to be a higher percent of females comparatively in the east and southeast regions.
 
