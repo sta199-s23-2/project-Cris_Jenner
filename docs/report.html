@@ -312,37 +312,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="st">`</span><span class="at">Income.Median Houseold Income</span><span class="st">`</span> <span class="sc">~</span> <span class="st">`</span><span class="at">Age.Percent 65 and Older</span><span class="st">`</span> <span class="sc">+</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>        <span class="st">`</span><span class="at">Miscellaneous.Percent Female</span><span class="st">`</span>, </span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> counties)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = `Income.Median Houseold Income` ~ `Age.Percent 65 and Older` + 
-    `Miscellaneous.Percent Female`, data = counties)
-
-Coefficients:
-                   (Intercept)      `Age.Percent 65 and Older`  
-                       61790.0                          -799.7  
-`Miscellaneous.Percent Female`  
-                         150.2  </code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>counties <span class="ot">&lt;-</span> counties <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">income =</span> <span class="st">`</span><span class="at">Income.Median Houseold Income</span><span class="st">`</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">education =</span> <span class="st">`</span><span class="at">Education.Bachelor's Degree or Higher</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="st">`</span><span class="at">Income.Median Houseold Income</span><span class="st">`</span> <span class="sc">~</span> <span class="st">`</span><span class="at">Education.Bachelor's Degree or Higher</span><span class="st">`</span>, </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> counties)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = `Income.Median Houseold Income` ~ `Education.Bachelor's Degree or Higher`, 
-    data = counties)
-
-Coefficients:
-                            (Intercept)  
-                                  30418  
-`Education.Bachelor's Degree or Higher`  
-                                   1049  </code></pre>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(income <span class="sc">~</span> education, <span class="at">data =</span> counties) <span class="sc">|&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(income <span class="sc">~</span> education, </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> counties) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We first summarized our data (finding median income, education levels, etc.) and manipulated it (using full_join) in order to create Choropleth maps of the US. Each state is colored based on the median values of different variables, including percent of elderly population, percent female population, median education levels, and median household income. We chose to create these maps as they helped us visualize geographic patterns within the US based on the spectrum of colors by state. Finally, we used linear regression analysis to model the relationships between variables like age and income.</p>
 <p><strong><em>Results</em></strong></p>

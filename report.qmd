@@ -152,22 +152,34 @@ plot_usmap(data = maps_dataframe2,
        title = "Elderly Populations Breakdowns By State") +
   scale_fill_viridis_c() +
   theme(legend.position = "bottom") 
+```
+
+```{r}
+#| label: changing variables
+
+counties <- counties |>
+  rename(income = `Income.Median Houseold Income`,
+         education = `Education.Bachelor's Degree or Higher`)
 
 ```
 
 ```{r}
 #| label: lin_reg_age_gender
+#| eval: false
 
-lm(`Income.Median Houseold Income` ~ `Age.Percent 65 and Older` + 
-        `Miscellaneous.Percent Female`, 
-      data = counties)
+linear_reg() |>
+  set_engine("lm") |>
+  fit(income ~ education, data = counties) |>
+  pull(adj.r.squared)
 ```
 
 ```{r}
 #| label: lin_reg_education
+#| eval: false
 
-lm(`Income.Median Houseold Income` ~ `Education.Bachelor's Degree or Higher`, 
-      data = counties)
+lm(income ~ education, 
+      data = counties) |>
+  pull(adj.r.squared)
 ```
 
 We first summarized our data (finding median income, education levels, etc.) and manipulated it (using full_join) in order to create Choropleth maps of the US. Each state is colored based on the median values of different variables, including percent of elderly population, percent female population, median education levels, and median household income. We chose to create these maps as they helped us visualize geographic patterns within the US based on the spectrum of colors by state. Finally, we used linear regression analysis to model the relationships between variables like age and income.
