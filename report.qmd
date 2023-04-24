@@ -101,10 +101,11 @@ filtered_counties |>
     aes(x = education, y = income)) +
   geom_point() +
   labs(x = "Median Education Level Per County",
-       y = "Median Household Income Per County",
+       y = "Median Household Income Per County in Thousands",
        title = "Median Household Incomes Versus 
        Education Levels") +
-  geom_smooth(method = "lm" , se = F) 
+  geom_smooth(method = "lm" , se = F) +
+  scale_y_continuous(labels = scales::comma_format(scale = 0.001))
 
 ```
 
@@ -120,10 +121,11 @@ filtered_counties |>
     aes(x = percent_female, y = income)) +
   geom_point() +
   labs(x = "Female Percentages Per County",
-       y = "Median Household Income Per County",
+       y = "Median Household Income Per County in Thousands",
        title = "Median Household Incomes Versus 
        Female Percentages") +
-  geom_smooth(method = "lm" , se = F) 
+  geom_smooth(method = "lm" , se = F) +
+  scale_y_continuous(labels = scales::comma_format(scale = 0.001))
 
 ```
 
@@ -139,10 +141,11 @@ filtered_counties |>
     aes(x = percent_female, y = income)) +
   geom_point() +
   labs(x = "Age 65 and Older Per County",
-       y = "Median Household Income Per County",
+       y = "Median Household Income Per County in Thousands",
        title = "Median Household Incomes Versus 
        Age 65 and Older") +
-  geom_smooth(method = "lm" , se = F) 
+  geom_smooth(method = "lm" , se = F) + 
+  scale_y_continuous(labels = scales::comma_format(scale = 0.001))
 
 ```
 
@@ -158,10 +161,11 @@ filtered_counties |>
     aes(x = percentage_white, y = income)) +
   geom_point() +
   labs(x = "White Percentage Per County",
-       y = "Median Household Income Per County",
+       y = "Median Household Income Per County (in Thousands)",
        title = "Median Household Incomes Versus 
        White Percentage") +
-  geom_smooth(method = "lm" , se = F) 
+  geom_smooth(method = "lm" , se = F) +
+  scale_y_continuous(labels = scales::comma_format(scale = 0.001))
 
 ```
 
@@ -231,7 +235,6 @@ model_with_ethnicity <- linear_reg() |>
 
 glance(model_with_ethnicity)$r.squared
 ```
-
 
 We first summarized our data (finding median income, education levels, etc.) and manipulated it (using full_join) in order to create Choropleth maps of the US. Each state is colored based on the median values of different variables, including percent of elderly population, percent female population, median education levels, and median household income. We chose to create these maps as they helped us visualize geographic patterns within the US based on the spectrum of colors by state. Finally, we used linear regression analysis to model the relationships between variables like age and income.
 
