@@ -36,6 +36,7 @@ The dataset we are analyzing is from The Collection of Really Great, Interesting
 library(tidyverse)
 library(usmap)
 library(geofacet)
+library(tidymodels)
 ```
 
 ```{r}
@@ -167,10 +168,12 @@ counties <- counties |>
 #| label: lin_reg_age_gender
 #| eval: false
 
-linear_reg() |>
+model <- linear_reg() |>
   set_engine("lm") |>
-  fit(income ~ education, data = counties) |>
-  pull(adj.r.squared)
+  fit(income ~ education, data = counties) 
+
+#summary(model)$adj.r.squared
+glance(model)$adj.r.squared
 ```
 
 ```{r}
