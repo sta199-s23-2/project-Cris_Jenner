@@ -80,10 +80,10 @@ maps_dataframe <- full_join(statepop, state_data, by = c("abbr" = "State"))
 plot_usmap(data = maps_dataframe,
            values = "median_income",
            labels = TRUE) +
-  labs(fill = "Median Household Income", 
+  labs(fill = "Median Household Income (in Thousands)", 
        title = "Household Incomes Per State") +
-  scale_fill_viridis_c() +
-  theme(legend.position = "bottom") 
+  scale_fill_viridis_c(label = scales::label_number_si(scale = 0.001)) +
+  theme(legend.position = "bottom")
 
 ```
 
