@@ -180,7 +180,7 @@ glance(model)$adj.r.squared
 #| label: lin_reg_education
 #| eval: false
 
-lm(income ~ education, 
+lm(income ~ education, #+ as.factor(state) + as.factor(state)*education (after education)
       data = counties) |>
   pull(adj.r.squared)
 ```
