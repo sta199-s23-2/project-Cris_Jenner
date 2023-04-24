@@ -47,32 +47,22 @@ library(tidymodels)
 counties <- read_csv("data/county_demographics.csv")
 ```
 
-```{r}
-#| label: mean_white
-
-counties |>
-  summarize(mean(`Ethnicities.White Alone	 not Hispanic or Latino`))
-```
+*Renaming Variables*
 
 ```{r}
-#| label: mean_income_above
+#| label: changing variables
 
-counties_white <- counties |>
-  filter(`Ethnicities.White Alone	 not Hispanic or Latino` >= 75.83992)
+filtered_counties <- counties |>
+  rename(income = `Income.Median Houseold Income`,
+         education = `Education.Bachelor's Degree or Higher`,
+         percent_female = `Miscellaneous.Percent Female`,
+         age = `Age.Percent 65 and Older`,
+         percentage_white = `Ethnicities.White Alone\t not Hispanic or Latino`) |>
+  select(County, State, income, education, percent_female, age, percentage_white)
 
-counties_white |>
-  summarize(mean_income_white = mean(`Income.Median Houseold Income`))
 ```
 
-```{r}
-#| label: mean_income_below
-
-counties_nonwhite <- counties|>
-  filter(`Ethnicities.White Alone	 not Hispanic or Latino` <= 75.83992) 
-
-counties_nonwhite |>
-  summarize(mean_income_nonwhite = mean(`Income.Median Houseold Income`))
-```
+*Graph of Income Versus State*
 
 ```{r}
 #| label: income
@@ -83,8 +73,7 @@ statepop <- statepop
 
 state_data <- counties |>
   group_by(State) |>
-  summarize(median_income = median(`Income.Median Houseold Income`),
-            median_education = median(`Education.Bachelor's Degree or Higher`))
+  summarize(median_income = median(`Income.Median Houseold Income`))
 
 maps_dataframe <- full_join(statepop, state_data, by = c("abbr" = "State")) 
 
@@ -98,92 +87,151 @@ plot_usmap(data = maps_dataframe,
 
 ```
 
+*Graphs of Income Versus Different Variables*
+
+Income vs. Education Level
+
 ```{r}
-#| label: education
+#| label: income-education
 #| message: false
 #| warning: false
 
-plot_usmap(data = maps_dataframe,
-           values = "median_education",
-           labels = TRUE) +
-  labs(fill = "Median Education Levels", 
-       title = "Education Levels Per State") +
-  scale_fill_viridis_c() +
-  theme(legend.position = "bottom") 
+filtered_counties |>
+  ggplot(
+    aes(x = education, y = income)) +
+  geom_point() +
+  labs(x = "Median Education Level Per County",
+       y = "Median Household Income Per County",
+       title = "Median Household Incomes Versus 
+       Education Levels") +
+  geom_smooth(method = "lm" , se = F) 
 
 ```
 
+Income vs. Percent Female
+
 ```{r}
-#| label: gender
+#| label: income-percent-female
 #| message: false
 #| warning: false
 
-by_gender <- counties |>
-  group_by(State) |>
-  summarize(percent_female = median(`Miscellaneous.Percent Female`),
-            percent_male = median(100 - `Miscellaneous.Percent Female`))
-
-maps_dataframe1 <- full_join(statepop, by_gender, by = c("abbr" = "State")) 
-
-plot_usmap(data = maps_dataframe1,
-           values = "percent_female",
-           labels = TRUE) +
-  labs(fill = "Median percent female", 
-       title = "Gender Breakdowns By State") +
-  scale_fill_viridis_c() +
-  theme(legend.position = "bottom") 
+filtered_counties |>
+  ggplot(
+    aes(x = percent_female, y = income)) +
+  geom_point() +
+  labs(x = "Female Percentages Per County",
+       y = "Median Household Income Per County",
+       title = "Median Household Incomes Versus 
+       Female Percentages") +
+  geom_smooth(method = "lm" , se = F) 
 
 ```
 
+Income vs. Age 65 and Older
+
 ```{r}
-#| label: age
+#| label: income-age
 #| message: false
 #| warning: false
 
-by_age <- counties |>
-  group_by(State) |>
-  summarize(percent_elderly = median(`Age.Percent 65 and Older`))
-
-maps_dataframe2 <- full_join(statepop, by_age, by = c("abbr" = "State")) 
-
-plot_usmap(data = maps_dataframe2,
-           values = "percent_elderly",
-           labels = TRUE) +
-  labs(fill = "Median percent of population over 65 years old", 
-       title = "Elderly Populations Breakdowns By State") +
-  scale_fill_viridis_c() +
-  theme(legend.position = "bottom") 
-```
-
-```{r}
-#| label: changing variables
-
-counties <- counties |>
-  rename(income = `Income.Median Houseold Income`,
-         education = `Education.Bachelor's Degree or Higher`)
+filtered_counties |>
+  ggplot(
+    aes(x = percent_female, y = income)) +
+  geom_point() +
+  labs(x = "Age 65 and Older Per County",
+       y = "Median Household Income Per County",
+       title = "Median Household Incomes Versus 
+       Age 65 and Older") +
+  geom_smooth(method = "lm" , se = F) 
 
 ```
 
-```{r}
-#| label: lin_reg_age_gender
-#| eval: false
+Income vs. Percentage White
 
-model <- linear_reg() |>
+```{r}
+#| label: income-ethnicity-white
+#| message: false
+#| warning: false
+
+filtered_counties |>
+  ggplot(
+    aes(x = percentage_white, y = income)) +
+  geom_point() +
+  labs(x = "White Percentage Per County",
+       y = "Median Household Income Per County",
+       title = "Median Household Incomes Versus 
+       White Percentage") +
+  geom_smooth(method = "lm" , se = F) 
+
+```
+
+*Models (Linear Regressions)*
+
+Baseline Model
+
+```{r}
+#| label: lin_reg_income_state
+
+model_baseline <- linear_reg() |>
   set_engine("lm") |>
-  fit(income ~ education, data = counties) 
+  fit(income ~ State, data = filtered_counties) 
 
-#summary(model)$adj.r.squared
-glance(model)$adj.r.squared
+linear_reg() |>
+  set_engine("lm") |>
+  fit(income ~ State, data = filtered_counties) 
+
+glance(model_baseline)$r.squared
 ```
+
+Model with State and Education
 
 ```{r}
-#| label: lin_reg_education
-#| eval: false
+#| label: lin_reg_income_state_and_education
 
-lm(income ~ education, #+ as.factor(state) + as.factor(state)*education (after education)
-      data = counties) |>
-  pull(adj.r.squared)
+model_with_education <- linear_reg() |>
+  set_engine("lm") |>
+  fit(income ~ State + education, data = filtered_counties) 
+
+glance(model_with_education)$r.squared
 ```
+
+Model with State and Percent Female
+
+```{r}
+#| label: lin_reg_income_state_and_female
+
+model_with_percent_female <- linear_reg() |>
+  set_engine("lm") |>
+  fit(income ~ State + percent_female, data = filtered_counties) 
+
+glance(model_with_percent_female)$r.squared
+
+```
+
+Model with State and Age 65 and Older
+
+```{r}
+#| label: lin_reg_income_state_and_age
+
+model_with_age <- linear_reg() |>
+  set_engine("lm") |>
+  fit(income ~ State + age, data = filtered_counties) 
+
+glance(model_with_age)$r.squared
+```
+
+Model with State and Percentage White
+
+```{r}
+#| label: lin_reg_income_state_and_ethnicity
+
+model_with_ethnicity <- linear_reg() |>
+  set_engine("lm") |>
+  fit(income ~ State + percentage_white, data = filtered_counties) 
+
+glance(model_with_ethnicity)$r.squared
+```
+
 
 We first summarized our data (finding median income, education levels, etc.) and manipulated it (using full_join) in order to create Choropleth maps of the US. Each state is colored based on the median values of different variables, including percent of elderly population, percent female population, median education levels, and median household income. We chose to create these maps as they helped us visualize geographic patterns within the US based on the spectrum of colors by state. Finally, we used linear regression analysis to model the relationships between variables like age and income.
 
