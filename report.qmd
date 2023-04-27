@@ -4,7 +4,7 @@ subtitle: "Report"
 format: html
 editor: visual
 execute:
-  echo: true
+  echo: false
 ---
 
 ***Introduction***
@@ -25,6 +25,8 @@ There are persistent problems and injustices in the United States surrounding in
 The dataset we are analyzing is from The Collection of Really Great, Interesting, Situated Datasets (CORGIS) Project. The data was collected from 2010 to 2019 by the United States Census Bureau. It should be noted that some of the estimates came from sample data. The dataset includes a wide variety of observations for various counties in the United States. In order to best serve our research question, we will focus on the statistics such as education level, ethnicity, age, and gender as well as respective state and median household income. The data is largely qualitative and in terms of what percentage of the county fits a certain description such as being a high school graduate or white, although there are some quantitive variables such as state and county.\
 
 ***Methodology***
+
+We began by loading in the necessary libraries and obtained the county demographic data.
 
 ```{r}
 #| label: load-pkgs
@@ -47,6 +49,8 @@ counties <- read_csv("data/county_demographics.csv")
 
 *Renaming Variables*
 
+We renamed our variables of interest because our dataset's variables were too long. We focused on the variables of median household income ("income"), the percentage of the county that had a bachelor's degree or higher ("education"), the percentage of the county that was female ("percent_female"), the percentage of the county that was 65 years and older ("age"), and the percentage of the county that was White and not Hispanic ("percentage_white").
+
 ```{r}
 #| label: changing variables
 
@@ -61,6 +65,8 @@ filtered_counties <- counties |>
 ```
 
 *Graph of Income Versus State*
+
+To start our exploratory data analysis, we wanted to see how income varied across states. So, we made a heat map of the United States with different colors denoting different median household income levels.
 
 ```{r}
 #| label: income
@@ -84,6 +90,8 @@ plot_usmap(data = maps_dataframe,
   theme(legend.position = "bottom")
 
 ```
+
+According to this graph, areas in the northeast and west tend to have the highest median household incomes, and areas in the southeast tend to have the lowest median household incomes.
 
 *Graphs of Income Versus Different Variables*
 
