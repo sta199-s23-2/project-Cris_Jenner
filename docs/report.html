@@ -59,7 +59,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -152,7 +151,8 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="report_files/figure-html/income-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>According to this graph, areas in the northeast and west tend to have the highest median household incomes, and areas in the southeast tend to have the lowest median household incomes.</p>
+<p>We first summarized our data (finding median income) and manipulated it (using full_join) in order to create a Choropleth map of the US. Each state is colored based on median household income. We chose to create these maps as they helped us visualize general geographic patterns within the US based on the spectrum of colors by state. The states that are colored darker (such as purple and blue) have lower median household incomes, whereas those that are lighter colors (like yellow and green) are states that have higher median household incomes.</p>
+<p>This visualization allows us to see that there are greater income disparities in the southeatern states, especially Mississippi, and that there is a generally higher median household income in the western and northeastern states, especially New Jersey.</p>
 <p><em>Graphs of Income Versus Different Variables</em></p>
 <p>Income vs.&nbsp;Education Level</p>
 <div class="cell">
@@ -160,24 +160,29 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="report_files/figure-html/income-education-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>The line of best fit of this scatter plot suggests a moderately strong, positive correlation between median education level per county and median household income per county in thousands.</p>
 <p>Income vs.&nbsp;Percent Female</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="report_files/figure-html/income-percent-female-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>The line of best fit of this scatter plot suggests no correlation, or an extremely weak positive correlation, between female percentages per county and median household income per county in thousands.</p>
 <p>Income vs.&nbsp;Age 65 and Older</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="report_files/figure-html/income-age-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>The line of best fit of this scatter plot suggests no correlation, or an extremely weak positive correlation, between percent aged 65 and older per county and median household income per county in thousands.</p>
 <p>Income vs.&nbsp;Percentage White</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="report_files/figure-html/income-ethnicity-white-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>The line of best fit of this scatter plot suggests a very weak positive correlation between white percentage per county and median household income per county in thousands.</p>
+<p>Given the results of these preliminary visuals, it seems as though education will be the variable that accounts for the most variability in median household income.</p>
 <p><em>Models (Linear Regressions)</em></p>
 <p>Baseline Model</p>
 <div class="cell">
@@ -236,14 +241,11 @@ Coefficients:
 <pre><code>[1] 0.2985728</code></pre>
 </div>
 </div>
-<p>We first summarized our data (finding median income, education levels, etc.) and manipulated it (using full_join) in order to create a Choropleth map of the US. Each state is colored based on median household income. We chose to create these maps as they helped us visualize general geographic patterns within the US based on the spectrum of colors by state. The states that are colored darker (such as purple and blue) have lower median household incomes, whereas those that are lighter colors (like yellow and green) are states that have higher median household incomes. This visualization allows us to see that there are greater income disparities in the southern states, especially Mississippi and that there is a generally higher median household income in the western and northeastern states, especially New Jersey.</p>
 <p><strong><em>Results</em></strong></p>
 <p>First of all, according to the map visualization, median household income levels appear to be the lowest in the southern regions, particularly in the southeast. They tend to be the highest in the northeast and west. This trend is very similar for the map visualization of median education levels, but the difference between the regions is not as extreme. There are very high median education levels in the northeast compared to the rest of the country.</p>
 <p>Additionally, within each state’s population, there seems to be a lower percent of females in the northwest and west (~48% to 50%), while there seems to be a higher percent of females comparatively in the east and southeast regions.</p>
 <p>The percent elderly in the US among states seems to be very scattered among regions. Among all states, Montana seems to have the greatest elderly population while Utah and Alaska seem to have the lowest. It seems that states in the northwest seem to have the greatest elderly populations, although the correlation among region seems to be weak.</p>
 <p>We can see the relationships between income, age, gender, and education below through the following linear regression models.</p>
-<p><span class="math inline">\(\widehat{Median\_Household\_Income} = 30418 + 1049*Percent\_College\_Degree\)</span></p>
-<p>For a one percent increase in percent of county citizens with a college degree, we estimate a mean change in median household income of 1049 dollars.</p>
 
 
 
