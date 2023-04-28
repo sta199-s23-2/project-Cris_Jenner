@@ -262,7 +262,6 @@ Additionally, within each state's population, there seems to be a lower percent 
 
 The percent elderly in the US among states seems to be very scattered among regions. Among all states, Montana seems to have the greatest elderly population while Utah and Alaska seem to have the lowest. It seems that states in the northwest seem to have the greatest elderly populations, although the correlation among region seems to be weak.
 
-
 ***Discussion***
 
 Input our conclusions, possible future analyses, and potential limitations
