@@ -191,6 +191,8 @@ Given the results of these preliminary visuals, it seems as though education wil
 
 Baseline Model
 
+Before we created any additive models, we first created a baseline model that only looked at median household income for all of the states. We created a linear regression because the response variable was numeric (median household income). The r-squared value for this model was 0.2923676, meaning that around 29% of the variability in median household income is due to the state.
+
 ```{r}
 #| label: lin_reg_income_state
 
@@ -205,6 +207,8 @@ linear_reg() |>
 glance(model_baseline)$r.squared
 ```
 
+Next, we created four different linear regression models that combined state with each variable to see which variable, when combined with state, resulted in the highest variability in median household income. We used r-squared values because each of these models only had 2 variables, so the number of variables would not have an effect on r-squared. We also used additive models instead of interaction models because if we used interaction models, there would be too many coefficients (because of each state). Therefore, for the purposes of clarity, we decided to use additive models. However, in future projects, we could look into interaction models.
+
 Model with State and Education
 
 ```{r}
@@ -216,6 +220,8 @@ model_with_education <- linear_reg() |>
 
 glance(model_with_education)$r.squared
 ```
+
+According to the r-squared value of 0.6129233, our additive model with state and education explains roughly 61% of the variability in median household income.
 
 Model with State and Percent Female
 
@@ -230,6 +236,8 @@ glance(model_with_percent_female)$r.squared
 
 ```
 
+According to the r-squared value of 0.2956188, our additive model with state and the percentage of people who are female explains roughly 61% of the variability in median household income.
+
 Model with State and Age 65 and Older
 
 ```{r}
@@ -241,6 +249,8 @@ model_with_age <- linear_reg() |>
 
 glance(model_with_age)$r.squared
 ```
+
+According to the r-squared value of 0.3746036, our additive model with state and the percentage of people who are 65 years and older explains roughly 37% of the variability in median household income.
 
 Model with State and Percentage White
 
@@ -254,9 +264,15 @@ model_with_ethnicity <- linear_reg() |>
 glance(model_with_ethnicity)$r.squared
 ```
 
+According to the r-squared value of 0.2985728, our additive model with state and the percentage of people who are White and not Hispanic or Latino explains roughly 30% of the variability in median household income.
+
 ***Results***
 
-A higher r-squared value means that a greater percentage of the variability in the dependent variable can be explained by the independent variables. In this case, the dependent variable was median household income. Through linear regression models, the r-squared values for state + each of the independent variables for education, age, gender, and ethnicity, respectively, are 0.6129, 0.3746, 0.2956, and 0.2986. Therefore, as the r-squared value for education was the highest, it is the best predictor of median household income among these four explanatory variables. Additionally, based on the graphs for each variable, education vs. income was also the only graph with a best-fit line with a positive slope, while the other three graphs had best-fit lines that were almost completely flat.
+A higher r-squared value means that a greater percentage of the variability in the dependent variable can be explained by the independent variables. In this case, the dependent variable was median household income. Before creating any additive models, we created a baseline linear regression model that solely focused on the relationship between state and median household income. According to the r-squared value of 0.2923676, around 29% of the variability in median household income is due to the state. We then compared this r-squared value to r-squared values of the four additive models. The r-squared values for state and each of the independent variables for education, age, gender, and ethnicity, respectively, are 0.6129, 0.3746, 0.2956, and 0.2986. Therefore, as the r-squared value for education was the highest (increased the most from the baseline model), it is the best predictor of median household income (when coupled with state) among these four explanatory variables. Additionally, based on the graphs for each variable, education vs. income was also the only graph with a best-fit line with a positive slope.
+
+After the state and education model, the next best model was the additive model with state and the percentage of people who are 65 years and older. The r-squared value was 0.3746, meaning the additive model explains roughly 37% of the variation in median household income. This was not much of an increase from the baseline model that only examined the state. This makes sense because from our exploratory data analysis, the graph of median household income versus percentage of people 65 years and older had a relatively weak and flat correlation. 
+
+The worst models was the additive model with state and the percentage of people who are White and the additive model with state and the percentage of people who are female. The r-squared value for the first model was 0.2985728, meaning this additive model explains roughly 30% of the variation in median household income. The r-squared value for the second model was 0.2956188, meaning this additive model explains roughly 30% of the variation in median household income. These r-squared values are also not much higher than the r-squared value of the baseline model, which makes sense because the graphs for these variables were relatively weak and flat. 
 
 The coefficients for each state for the linear regression models represent the change in income for each state compared to the intercept, which is the average of the 50 states (SOMEONE CHECK ON THIS). Excluding Washington D.C., the state with the highest income was New Jersey, with a coefficient of 14395.7, and the state with the lowest income was Mississippi, with a coefficient of -28878.4.
 
