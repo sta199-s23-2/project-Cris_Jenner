@@ -1,5 +1,5 @@
 ---
-title: "County Demographics: What Factors Influence Career Outcomes"
+title: "After accounting for state, which variable accounts for the most variability in median household income?"
 subtitle: "Report"
 format: html
 editor: visual
