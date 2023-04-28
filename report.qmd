@@ -22,7 +22,7 @@ There are persistent problems and injustices in the United States surrounding in
 \
 ***Data***
 
-The dataset we are analyzing is from The Collection of Really Great, Interesting, Situated Datasets (CORGIS) Project. The data was collected from 2010 to 2019 by the United States Census Bureau. It should be noted that some of the estimates came from sample data. The dataset includes a wide variety of observations for various counties in the United States. In order to best serve our research question, we will focus on the statistics such as education level, ethnicity, age, and gender as well as respective state and median household income. The data is largely qualitative and in terms of what percentage of the county fits a certain description such as being a high school graduate or white, although there are some quantitive variables such as state and county.\
+The dataset we are analyzing is from The Collection of Really Great, Interesting, Situated Datasets (CORGIS) Project. The data was collected from 2010 to 2019 by the United States Census Bureau. It should be noted that some of the estimates came from sample data. The dataset includes a wide variety of observations for various counties in the United States. In order to best serve our research question, we will focus on the statistics such as education level, ethnicity, age, and gender as well as respective state and median household income. The data is largely qualitative and in terms of what percentage of the county fits a certain description such as being a high school graduate or white, although there are some quantitative variables such as state and county.\
 
 ***Methodology***
 
@@ -253,14 +253,6 @@ Additionally, within each state's population, there seems to be a lower percent 
 The percent elderly in the US among states seems to be very scattered among regions. Among all states, Montana seems to have the greatest elderly population while Utah and Alaska seem to have the lowest. It seems that states in the northwest seem to have the greatest elderly populations, although the correlation among region seems to be weak.
 
 We can see the relationships between income, age, gender, and education below through the following linear regression models.
-
-$\widehat{Median\_Household\_Income} = 61790 - 799.7*Percent\_65\_and\_Older + 150.2*Percent\_Female$
-
-Holding percent of women in each county constant, for a one percent increase in percent of county citizens 65 years or older, we estimate a mean change in median household income of -799.70 dollars. Therefore, as elderly population increases, income decreases.
-
-Holding percent of citizens 65 years or older, for a one percent increase in percent of women in each county, we estimate a mean change in median household income of \$150.20.
-
-According to the mean summary statistics of percentage of persons of white ethnicity per county, there is a decrease in median household income between above average percentage of white persons and below average percentage of white persons. There is a decrease of \$1945.99 in median household income.
 
 $\widehat{Median\_Household\_Income} = 30418 + 1049*Percent\_College\_Degree$
 
