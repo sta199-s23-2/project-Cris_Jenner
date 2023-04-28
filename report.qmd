@@ -212,7 +212,7 @@ Model with State and Education
 
 model_with_education <- linear_reg() |>
   set_engine("lm") |>
-  fit(income ~ State + education, data = filtered_counties) 
+  fit(income ~ State + education, data = filtered_counties)
 
 glance(model_with_education)$r.squared
 ```
@@ -262,4 +262,4 @@ The coefficients for each state for the linear regression models represent the c
 
 ***Discussion***
 
-Input our conclusions, possible future analyses, and potential limitations
+The state of New Jersey had the third highest coefficient (1259.7) in the fitted model between income, state, and education, and Mississippi had the lowest coefficient (-23261.6527). Given that New Jersey was the highest median household income and Mississippi had the lowest, the results of the education model strongly support the conclusion that education is the variable that most accounts for variability in median household income across states. 
