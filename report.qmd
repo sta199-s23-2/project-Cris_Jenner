@@ -256,12 +256,6 @@ glance(model_with_ethnicity)$r.squared
 
 ***Results***
 
-First of all, according to the map visualization, median household income levels appear to be the lowest in the southern regions, particularly in the southeast. They tend to be the highest in the northeast and west. This trend is very similar for the map visualization of median education levels, but the difference between the regions is not as extreme. There are very high median education levels in the northeast compared to the rest of the country.
-
-Additionally, within each state's population, there seems to be a lower percent of females in the northwest and west (\~48% to 50%), while there seems to be a higher percent of females comparatively in the east and southeast regions.
-
-The percent elderly in the US among states seems to be very scattered among regions. Among all states, Montana seems to have the greatest elderly population while Utah and Alaska seem to have the lowest. It seems that states in the northwest seem to have the greatest elderly populations, although the correlation among region seems to be weak.
-
 A higher r-squared value means that a greater percentage of the variability in the dependent variable can be explained by the independent variables. In this case, the dependent variable was median household income. Through linear regression models, the r-squared values for state + each of the independent variables for education, age, gender, and ethnicity, respectively, are 0.6129, 0.3746, 0.2956, and 0.2986. Therefore, as the r-squared value for education was the highest, it is the best predictor of median household income among these four explanatory variables. Additionally, based on the graphs for each variable, education vs. income was also the only graph with a best-fit line with a positive slope, while the other three graphs had best-fit lines that were almost completely flat.
 
 The coefficients for each state for the linear regression models represent the change in income for each state compared to the intercept, which is the average of the 50 states (SOMEONE CHECK ON THIS). Excluding Washington D.C., the state with the highest income was New Jersey, with a coefficient of 14395.7, and the state with the lowest income was Mississippi, with a coefficient of -28878.4.
