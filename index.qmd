@@ -1,8 +1,8 @@
 ---
-title: "TEAM NAME"
+title: "Cris Jenner"
 subtitle: "STA 199 Project"
 format: html
 editor: visual
 ---
 
-Add project abstract here.
+We were interested in the different factors that have an effect on household income. We found a dataset from the U.S. Census Bureau with county demographic information from 2010 to 2019. Our question is: After accounting for state, which variable accounts for the most variability in median household income? We analyzed education levels, ethnicities, gender, and age, and we found that after accounting for state, education level (whether or not you had a Bachelor's degree or higher) accounted for the most variability in median household income.
